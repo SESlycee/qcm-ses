@@ -81,11 +81,19 @@ h1{margin:0}
 .result{text-align:center}.result h1{font-size:3rem}
 @media(min-width:620px){.chapters{grid-template-columns:1fr 1fr}.levels{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:430px){.activity-tab{font-size:.9rem;padding:10px 4px}}
+
+.home-page{padding-top:34px}
+.home-page h1{font-size:2.35rem;line-height:1.08;margin-bottom:10px}
+@media(max-width:520px){
+  .home-page{padding-top:28px}
+  .home-page h1{font-size:2.05rem}
+}
+
 </style>
 </head>
 <body>
 <main class="app">
-<section id="home">
+<section id="home" class="home-page">
 <p class="eyebrow">Réviser les SES</p>
 <div class="grid levels" style="margin-top:18px">
 <button class="choice-btn level-btn" type="button" data-level="Terminale">Terminale</button>
