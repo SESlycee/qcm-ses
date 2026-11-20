@@ -1070,6 +1070,43 @@ body:has(#chapterChoice:not(.hidden))::after{
   content:"";
 }
 
+
+/* ===== Placement uniforme du décor v44 ===== */
+
+/* Même décor, même taille et même position sur absolument toutes les pages */
+body::after,
+body:has(#home:not(.hidden))::after,
+body:has(#chapterChoice:not(.hidden))::after{
+  left:50% !important;
+  right:auto !important;
+  bottom:-18vh !important;
+  width:min(92vw,980px) !important;
+  height:min(92vw,980px) !important;
+  transform:translateX(-50%) rotate(40deg) !important;
+  transform-origin:center bottom !important;
+  background-position:center bottom !important;
+  background-size:contain !important;
+  opacity:.95 !important;
+}
+
+/* Mobile : même principe, centré et strictement identique quelle que soit la page */
+@media(max-width:560px){
+  body::after,
+  body:has(#home:not(.hidden))::after,
+  body:has(#chapterChoice:not(.hidden))::after{
+    left:50% !important;
+    right:auto !important;
+    bottom:-12vh !important;
+    width:130vw !important;
+    height:130vw !important;
+    transform:translateX(-50%) rotate(40deg) !important;
+    transform-origin:center bottom !important;
+    background-position:center bottom !important;
+    background-size:contain !important;
+    opacity:.96 !important;
+  }
+}
+
 </style>
 </head>
 <body>
