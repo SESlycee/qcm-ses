@@ -2356,7 +2356,17 @@ $("multiValidate").addEventListener("click",()=>{
   });
 
   $("multiValidate").classList.add("hidden");
-  feedback(ok,q);
+
+  const expected=correct
+    .map(idx=>q.answers[idx])
+    .filter(Boolean)
+    .join(" ; ");
+
+  feedback(
+    ok,
+    q,
+    ok?"":"Réponses attendues : "+expected+"."
+  );
 });
 
 $("orderValidate").addEventListener("click",()=>{
