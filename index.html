@@ -1699,6 +1699,15 @@ section,
   z-index:1;
 }
 
+
+/* ===== v62 : QCM multiple — bonnes réponses entourées en vert ===== */
+.multi-row.correct{
+  border:2px solid #5E8167 !important;
+  box-shadow:0 0 0 2px rgba(94,129,103,.12) !important;
+  background:rgba(94,129,103,.08) !important;
+  border-radius:12px !important;
+}
+
 </style>
 </head>
 <body>
@@ -2356,17 +2365,7 @@ $("multiValidate").addEventListener("click",()=>{
   });
 
   $("multiValidate").classList.add("hidden");
-
-  const expected=correct
-    .map(idx=>q.answers[idx])
-    .filter(Boolean)
-    .join(" ; ");
-
-  feedback(
-    ok,
-    q,
-    ok?"":"Réponses attendues : "+expected+"."
-  );
+  feedback(ok,q);
 });
 
 $("orderValidate").addEventListener("click",()=>{
